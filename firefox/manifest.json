@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Codeforces Torture",
+  "version": "1.0",
+
+  "description": "This extension is aimed to the lazy coders who want to practice competitve programming, but procrastinate as they surf the web. Activating the extension will stop navigation to any other website other than Codeforces until the user solves a CP probem decided based upon their abilities from the TLE Eliminator's CP-31 Sheet.",
+
+  "homepage_url": "https://github.com/MubtasimSajid/Codeforces-Torture",
+
+  "icons": {
+    "48": "icons/logo-48.png"
+  }
+}
