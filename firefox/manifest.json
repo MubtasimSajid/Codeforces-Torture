@@ -1,13 +1,26 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Codeforces Torture",
   "version": "1.0",
 
-  "description": "This extension is aimed to the lazy coders who want to practice competitve programming, but procrastinate as they surf the web. Activating the extension will stop navigation to any other website other than Codeforces until the user solves a CP probem decided based upon their abilities from the TLE Eliminator's CP-31 Sheet.",
-
+  "description": "This extension is aimed for the lazy coders who want to practice competitve programming, but procrastinate & get distracted as they surf the web. Activating the extension will stop navigation to any other website other than Codeforces until the user solves a CP probem decided randomly based upon their abilities using the official Codeforces API.",
   "homepage_url": "https://github.com/MubtasimSajid/Codeforces-Torture",
-
   "icons": {
-    "48": "icons/logo-48.png"
+    "48": "icons/logo-48.png",
+    "96": "icons/logo-96.png"
+  },
+
+  "host_permissions": ["<all_urls>", "storage", "alarms", "notifications"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content-script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/problem-fetching.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
   }
 }
