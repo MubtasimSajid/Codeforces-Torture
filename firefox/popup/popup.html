@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="popup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h3>Codeforces Torture</h3>
+
+    <div id="setup-view">
+      <input type="text" id="handle" placeholder="Your Codeforces Handle" />
+      <input type="number" id="minR" placeholder="Min rating (default 800)" />
+      <input type="number" id="maxR" placeholder="Max rating (default 1200)" />
+      <button type="submit" id="save-btn">Get Problem</button>
+    </div>
+
+    <div id="problem-view" class="hidden">
+      <div class="problem-card">
+        <strong id="prob-name"></strong><br />
+        <span id="prob-rating"></span> Rating <br /><br />
+        <a id="prob-link" target="_blank">Solve on Codeforces</a>
+      </div>
+      <button id="refresh-btn" class="secondary">Change today's problem</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
