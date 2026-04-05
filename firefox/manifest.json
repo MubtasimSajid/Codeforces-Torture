@@ -10,7 +10,8 @@
     "96": "icons/logo-96.png"
   },
 
-  "host_permissions": ["<all_urls>", "storage", "alarms", "notifications"],
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": ["<all_urls>"],
   // "content_scripts": [
   //   {
   //     "matches": ["<all_urls>"],
@@ -18,7 +19,7 @@
   //   }
   // ],
   "background": {
-    "service_worker": "scripts/problem-fetching.js"
+    "scripts": ["scripts/problem-fetching.js"]
   },
   "action": {
     "default_popup": "popup/popup.html",

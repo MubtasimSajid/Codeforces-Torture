@@ -109,9 +109,9 @@ browser.alarms.onAlarm.addListener(async (alarm) => {
         if (problem) {
           await browser.storage.local.set({ todayProblem: problem });
 
-          browser.notification.create({
+          browser.notifications.create("dailyProblemNotif", {
             type: "basic",
-            iconUrl: "icons/logo-48.png",
+            iconUrl: browser.runtime.getURL("icons/logo-48.png"),
             title: "Your daily Codeforces challenge",
             message: `Today: ${problem.name} [${problem.rating}]`,
           });
@@ -120,5 +120,22 @@ browser.alarms.onAlarm.addListener(async (alarm) => {
         console.error("Failed to fetch daily problem:", error);
       }
     }
+  }
+});
+
+browser.runtime.onMessage.addListener(async (message) => {
+  if (message.action === "FETCH_NEW") {
+    const data = await browser.storage.local.get(["handle", "minR", "maxR"]);
+    if (!data.handle) return { error: "No handle" };
+
+    const newProblem = await getRandomUnsolved(
+      data.handle,
+      data.minR,
+      data.maxR,
+    );
+
+    await browser.storage.local.set({ todayProblem: newProblem });
+
+    return { problem: newProblem };
   }
 });
