@@ -12,7 +12,7 @@ No more "I'll solve problems after I check this one thing." Open a non-Codeforce
 - **Daily Random Problem** - picks a fresh unsolved problem matching your rating range every day
 - **Site Blocking** - overlays any non-Codeforces page with the problem & redirects you after 2 seconds (unless you've already solved a problem today)
 - **Automatic Handle Detection** - scrapes your handle from codeforces.com if you're logged in
-- **Rating Filter** - set min/max rating (rounded to nearest 100); defaults to 800–1200
+- **Rating Filter** - set min/max rating (rounded to nearest 100); defaults to 800-1200
 - **Desktop Notifications** - get notified when a new daily problem is assigned
 
 ## Installation
