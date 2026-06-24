@@ -30,12 +30,12 @@ No more "I'll solve problems after I check this one thing." Open a non-Codeforce
 2. Click **Load Temporary Add-on**
 3. Select `firefox/manifest.json`
 
-Approval pending for the extension to be released on Chrome Web Store & Firefox Add-Ons.
+It should also be available on [Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/codeforces-torture/).
 
 ## Usage
 
 1. Click the extension icon to open the popup
-2. The popup auto-detects your Codeforces handle if you're logged in (or enter it manually; it validates against the API)
+2. Popup auto-detects your Codeforces handle if you're logged in (or enter it manually to validate against the API)
 3. Optionally adjust the rating range
 4. Click **Get Problem** to immediately fetch a random unsolved problem, or wait for the daily alarm (fires 1 minute after install, then every 24 hours)
 
