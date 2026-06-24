@@ -9,15 +9,19 @@
   <body>
     <h3>Codeforces Torture</h3>
 
+    <div id="login-status">
+      <span id="login-text"></span>
+      <button id="login-btn" class="hidden">Login to Codeforces</button>
+    </div>
+
     <div class="setup-view">
       <input type="text" id="handle" placeholder="Your Codeforces Handle" />
-      <input type="number" name="minR" value="Min rating (default 800)" />
-      <input type="number" name="maxR" value="Max rating (default 1200)" />
+      <input type="number" id="minR" placeholder="Min rating (default 800)" />
+      <input type="number" id="maxR" placeholder="Max rating (default 1200)" />
       <button type="submit" id="save-btn">Get Problem</button>
     </div>
 
     <div id="problem-view" class="hidden">
-      <div class="problem-card"></div>
       <div class="problem-card">
         <strong id="prob-name"></strong><br />
         <span id="prob-rating"></span> Rating <br /><br />

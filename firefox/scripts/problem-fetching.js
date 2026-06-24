@@ -138,4 +138,59 @@ browser.runtime.onMessage.addListener(async (message) => {
 
     return { problem: newProblem };
   }
+
+  if (message.action === "CHECK_SOLVED_TODAY") {
+    const data = await browser.storage.local.get([
+      "handle",
+      "lastSolvedCheck",
+      "solvedToday",
+      "todayProblem",
+    ]);
+    if (!data.handle) return { solved: true };
+
+    if (data.lastSolvedCheck && data.solvedToday !== undefined) {
+      if (Date.now() - data.lastSolvedCheck < 300000) {
+        return { solved: data.solvedToday, problem: data.todayProblem || null };
+      }
+    }
+
+    try {
+      const today = new Date();
+      today.setUTCHours(0, 0, 0, 0);
+      const todayUnix = Math.floor(today.getTime() / 1000);
+      const resp = await fetch(
+        `https://codeforces.com/api/user.status?handle=${data.handle}&from=1&count=100`,
+      );
+
+      const result = await resp.json();
+      const solved =
+        result.status === "OK" &&
+        result.result.some(
+          (sub) => sub.verdict === "OK" && sub.creationTimeSeconds >= todayUnix,
+        );
+      await browser.storage.local.set({
+        solvedToday: solved,
+        lastSolvedCheck: Date.now(),
+      });
+      return { solved, problem: data.todayProblem || null };
+    } catch {
+      return { solved: true, problem: null };
+    }
+  }
+
+  if (message.action === "CHECK_CF_LOGIN") {
+    try {
+      const resp = await fetch("https://codeforces.com/", {
+        credentials: "include",
+      });
+      const html = await resp.text();
+      const match = html.match(
+        /<a[^>]*href="\/profile\/([^"]+)"[^>]*class="[^"]*rated-user[^"]*"[^>]*>/i,
+      );
+      if (match) return { loggedIn: true, handle: match[1] };
+      return { loggedIn: false, handle: null };
+    } catch {
+      return { loggedIn: false, handle: null };
+    }
+  }
 });

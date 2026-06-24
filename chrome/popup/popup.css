@@ -36,11 +36,21 @@ button {
   border-radius: 4px;
 }
 
-Codeforces Torture button:hover {
+button:hover {
   background: #2b6cb0;
 }
 
 .secondary {
   background: #718096;
   margin-top: 5px;
+}
+
+#login-status {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+#login-text {
+  display: block;
+  margin-bottom: 6px;
 }
