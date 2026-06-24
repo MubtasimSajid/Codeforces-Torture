@@ -187,7 +187,8 @@ browser.runtime.onMessage.addListener(async (message) => {
       const match = html.match(
         /<a[^>]*href="\/profile\/([^"]+)"[^>]*class="[^"]*rated-user[^"]*"[^>]*>/i,
       );
-      if (match) return { loggedIn: true, handle: match[1] };
+      const isLoggedIn = html.match(/Logout/i);
+      if (match && isLoggedIn) return { loggedIn: true, handle: match[1] };
       return { loggedIn: false, handle: null };
     } catch {
       return { loggedIn: false, handle: null };

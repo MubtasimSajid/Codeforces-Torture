@@ -130,9 +130,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         return;
       }
       const newProblem = await getRandomUnsolved(
-      data.handle,
-      Math.max(data.minR || 800, 800),
-      Math.min(data.maxR || 1200, 3100),
+        data.handle,
+        Math.max(data.minR || 800, 800),
+        Math.min(data.maxR || 1200, 3100),
       );
       await chrome.storage.local.set({ todayProblem: newProblem });
       sendResponse({ problem: newProblem });
@@ -189,7 +189,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         const match = html.match(
           /<a[^>]*href="\/profile\/([^"]+)"[^>]*class="[^"]*rated-user[^"]*"[^>]*>/i,
         );
-        if (match) {
+        const isLoggedIn = html.match(/Logout/i);
+        if (match && isLoggedIn) {
           sendResponse({ loggedIn: true, handle: match[1] });
           return;
         }
