@@ -2,7 +2,7 @@
 
 > A browser extension that blocks distracting websites until you solve a daily Codeforces problem.
 
-No more "I'll solve problems after I check this one thing.". Open a non-Codeforces site without solving today's problem? You get a full-page overlay redirecting you straight to a randomly chosen unsolved problem from your rating range.
+No more "I'll solve problems after I check this one thing." Open a non-Codeforces site without solving today's problem? You get a full-page overlay redirecting you straight to a randomly chosen unsolved problem from your rating range.
 
 ## Features
 
@@ -54,6 +54,6 @@ Vanilla JavaScript (ES6+), HTML, CSS. No build tools, no dependencies. Compatibl
 
 Inspired by [Coding Sloth's](https://www.youtube.com/@TheCodingSloth) [YouTube video](https://youtu.be/e4ReFOWMG9o) on his extension of [LeetCode Torture](https://github.com/The-CodingSloth/haha-funny-leetcode-extension).
 
-## AI Disclosure
+## Disclosure
 
 AI & LLM were extensively used for project management, feature planning & actual coding.
