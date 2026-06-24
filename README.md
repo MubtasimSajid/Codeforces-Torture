@@ -6,22 +6,22 @@ No more "I'll solve problems after I check this one thing." Open a non-Codeforce
 
 ## Features
 
-- **Daily Random Problem** — picks a fresh unsolved problem matching your rating range every day
-- **Site Blocking** — overlays any non-Codeforces page with the problem & redirects you after 2 seconds (unless you've already solved a problem today)
-- **Automatic Handle Detection** — scrapes your handle from codeforces.com if you're logged in
-- **Rating Filter** — set min/max rating (rounded to nearest 100); defaults to 800–1200
-- **Desktop Notifications** — get notified when a new daily problem is assigned
+- **Daily Random Problem** - picks a fresh unsolved problem matching your rating range every day
+- **Site Blocking** - overlays any non-Codeforces page with the problem & redirects you after 2 seconds (unless you've already solved a problem today)
+- **Automatic Handle Detection** - scrapes your handle from codeforces.com if you're logged in
+- **Rating Filter** - set min/max rating (rounded to nearest 100); defaults to 800–1200
+- **Desktop Notifications** - get notified when a new daily problem is assigned
 
 ## Installation
 
-### Chrome / Chromium
+### Chrome-based
 
 1. Go to `chrome://extensions`
 2. Enable **Developer mode** (top right)
 3. Click **Load unpacked**
 4. Select the `chrome/` directory
 
-### Firefox
+### Firefox-based
 
 1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on**
@@ -40,13 +40,13 @@ Once a problem is assigned, browsing non-Codeforces sites will redirect you to i
 
 ## Permissions
 
-- `storage` — save handle, rating range, problem cache
-- `alarms` — schedule daily problem refresh
-- `notifications` — daily problem notification
-- `tabs` — open Codeforces login / problem pages
-- `<all_urls>` — inject content script & fetch from Codeforces API
+- `storage` - save handle, rating range, problem cache
+- `alarms` - schedule daily problem refresh
+- `notifications` - daily problem notification
+- `tabs` - open Codeforces login / problem pages
+- `<all_urls>` - inject content script & fetch from Codeforces API
 
-## Tech
+## Tech Stack
 
 Vanilla JavaScript (ES6+), HTML, CSS. No build tools, no dependencies. Compatible with Manifest V3 on both Chrome & Firefox.
 
