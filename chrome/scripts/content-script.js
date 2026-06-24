@@ -19,7 +19,7 @@
   const overlay = document.createElement("div");
   overlay.id = "cf-torture-overlay";
   overlay.style.cssText =
-    "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);z-index:2147483647;display:flex;align-items:center;justify-content:center;font-family:sans-serif;";
+    "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;z-index:2147483647;display:flex;align-items:center;justify-content:center;font-family:sans-serif;";
 
   const card = document.createElement("div");
   card.style.cssText =
