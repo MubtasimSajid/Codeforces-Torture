@@ -100,8 +100,8 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
       try {
         const problem = await getRandomUnsolved(
           data.handle,
-          data.minR || 800,
-          data.maxR || 1200,
+          Math.max(data.minR || 800, 800),
+          Math.min(data.maxR || 1200, 3100),
         );
 
         if (problem) {
@@ -130,9 +130,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         return;
       }
       const newProblem = await getRandomUnsolved(
-        data.handle,
-        data.minR,
-        data.maxR,
+      data.handle,
+      Math.max(data.minR || 800, 800),
+      Math.min(data.maxR || 1200, 3100),
       );
       await chrome.storage.local.set({ todayProblem: newProblem });
       sendResponse({ problem: newProblem });

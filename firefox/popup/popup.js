@@ -85,10 +85,14 @@ document.getElementById("save-btn").addEventListener("click", async () => {
 
   let minR = document.getElementById("minR").value || 800;
   minR = minR - (minR % 100);
+  if (minR < 800) minR = 800;
   document.getElementById("minR").value = minR;
 
   let maxR = document.getElementById("maxR").value || 1200;
   maxR = maxR - (maxR % 100);
+  if (maxR > 3100) maxR = 3100;
+  if (minR > maxR) [minR, maxR] = [maxR, minR];
+  document.getElementById("minR").value = minR;
   document.getElementById("maxR").value = maxR;
 
   const settings = {

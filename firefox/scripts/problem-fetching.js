@@ -102,8 +102,8 @@ browser.alarms.onAlarm.addListener(async (alarm) => {
       try {
         const problem = await getRandomUnsolved(
           data.handle,
-          data.minR || 800,
-          data.maxR || 1200,
+          Math.max(data.minR || 800, 800),
+          Math.min(data.maxR || 1200, 3100),
         );
 
         if (problem) {
@@ -130,8 +130,8 @@ browser.runtime.onMessage.addListener(async (message) => {
 
     const newProblem = await getRandomUnsolved(
       data.handle,
-      data.minR,
-      data.maxR,
+      Math.max(data.minR || 800, 800),
+      Math.min(data.maxR || 1200, 3100),
     );
 
     await browser.storage.local.set({ todayProblem: newProblem });
