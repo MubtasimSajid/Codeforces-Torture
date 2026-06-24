@@ -3,7 +3,7 @@
   "name": "Codeforces Torture",
   "version": "1.0",
 
-  "description": "Activating the extension will stop navigation to any other website other than Codeforces until the user solves a CP problem on a daily basis",
+  "description": "Stops web surfing until a Codeforces problem has been solved",
   "homepage_url": "https://github.com/MubtasimSajid/Codeforces-Torture",
   "icons": {
     "48": "icons/logo-48.png",
