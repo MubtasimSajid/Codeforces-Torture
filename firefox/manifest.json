@@ -4,7 +4,10 @@
   "version": "1.0",
   "browser_specific_settings": {
     "gecko": {
-      "id": "codeforces-torture@arian-rahinur.com"
+      "id": "codeforces-torture@arian-rahinur.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
 
