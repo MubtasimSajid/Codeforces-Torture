@@ -1,10 +1,13 @@
 # Codeforces Torture
 
-> A browser extension that blocks distracting websites until you solve a daily Codeforces problem.
+> Browser extension to block distracting websites until a Codeforces problem is solved daily.
 
 No more "I'll solve problems after I check this one thing." Open a non-Codeforces site without solving today's problem? You get a full-page overlay redirecting you straight to a randomly chosen unsolved problem from your rating range.
 
 ## Features
+
+![Popup](popup.png)
+![Redirection](redirection.png)
 
 - **Daily Random Problem** - picks a fresh unsolved problem matching your rating range every day
 - **Site Blocking** - overlays any non-Codeforces page with the problem & redirects you after 2 seconds (unless you've already solved a problem today)
