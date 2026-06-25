@@ -17,6 +17,13 @@ No more "I'll solve problems after I check this one thing." Open a non-Codeforce
 
 ## Installation
 
+```bash
+git clone https://github.com/MubtasimSajid/Codeforces-Torture.git
+cd Codeforces-Torture
+```
+
+Then load the extension into your browser:
+
 ### Chrome-based
 
 1. Go to `chrome://extensions`
