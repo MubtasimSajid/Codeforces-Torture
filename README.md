@@ -22,12 +22,13 @@ No more "I'll solve problems after I check this one thing." Open a non-Codeforce
 
 ## Installation
 
+It's available on [Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/codeforces-torture/).
+To manually load it:
+
 ```bash
 git clone https://github.com/MubtasimSajid/Codeforces-Torture.git
 cd Codeforces-Torture
 ```
-
-Then load the extension into your browser:
 
 ### Chrome-based
 
@@ -41,8 +42,6 @@ Then load the extension into your browser:
 1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on**
 3. Select `firefox/manifest.json`
-
-It should also be available on [Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/codeforces-torture/).
 
 ## Usage
 
