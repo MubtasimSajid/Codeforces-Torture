@@ -24,6 +24,7 @@ No more "I'll solve problems after I check this one thing." Open a non-Codeforce
 ## Installation
 
 It's available on [Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/codeforces-torture/) (listed on [Firefox for Android](https://addons.mozilla.org/en-US/android/addon/codeforces-torture/) as well).
+
 To manually load it:
 
 ```bash
