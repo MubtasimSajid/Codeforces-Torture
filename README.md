@@ -66,6 +66,12 @@ Once a problem is assigned, browsing non-Codeforces sites will redirect you to i
 
 Vanilla JavaScript (ES6+), HTML, CSS. No build tools, no dependencies. Compatible with Manifest V3 on both Chrome & Firefox.
 
+## Privacy Policy
+
+This extension does not collect, store, transmit, or share any personal information or user data.
+
+The extension runs locally in your browser & does not communicate with external servers except those required for its stated functionality (if any), such as Codeforces' publicly documented APIs.
+
 ## Motivation
 
 Inspired by [Coding Sloth's](https://www.youtube.com/@TheCodingSloth) [YouTube video](https://youtu.be/e4ReFOWMG9o) on his extension of [LeetCode Torture](https://github.com/The-CodingSloth/haha-funny-leetcode-extension).
